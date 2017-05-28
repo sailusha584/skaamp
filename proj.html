@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Scene</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+	  
+		
+	<a-asset>
+		<a-asset-item id="tree-mtl" src="coconut-tree.mtl" dynamic-body>	</a-asset-item>
+
+		<a-asset-item id="tree-obj" src="coconut-tree.obj" dynamic-body>	</a-asset-item>	
+
+
+		<a-asset-item id="house-mtl" src="house.mtl" dynamic-body>	</a-asset-item>
+
+		<a-asset-item id="house-obj" src="house.obj" dynamic-body>	</a-asset-item>
+
+		<a-asset-item id="car-mtl" src="car-animation.mtl" dynamic-body>	</a-asset-item>
+
+		<a-asset-item id="car-obj" src="car-animation.obj" dynamic-body>	</a-asset-item>
+	
+
+	
+	</a-asset>
+
+	<a-entity obj-model="obj:#car-obj; mtl:#car-mtl" dynamic-body position="136.159 1.370 15.758" scale="0.1 0.1 0.1"></a-entity>
+
+
+
+	<a-box src="build.jpg" position="0 1.074 -3.783" scale="2 5 2"></a-box>
+	<a-box src="build.jpg" position="-9.092 1.074 -11.278" scale="2 5 2"></a-box>
+	<a-box src="build.jpg" position="9.092 1.074 -11.278" scale="2 5 2"></a-box>
+	<a-box src="build.jpg" position="0 1.074 -19.514" scale="2 5 2"></a-box>
+
+	<a-plane src="grass2.jpeg" position="-0.45 -1.5 -6.57" rotation="-90 0 0" width="30" height="30"></a-plane>
+	<a-plane width="30" height="3" src="road.jpg" color="#212121" position="-0.472 -1.499 4.749" rotation="-90 0 0"></a-plane>
+	<a-plane width="6" height="2.5" src="road.jpg" color="#212121" position="0 -1.498 0.5" rotation="-90 0 90"></a-plane>
+	<a-plane src="foot.png" position="-0.141 -1.4979 -12.182" width="15" height="12" rotation="-90 0 0"></a-plane>
+	
+	
+	<a-sky color="#bbdefb"></a-sky>
+
+
+
+
+
+	<a-entity>
+		<a-sphere  position="-14 0 -1" radius="0.5" light="type: point; intensity: 2; distance:10 ; decay:0" src="sun1.jpg">
+			<a-light type="ambient" intensity="0.2"></a-light>					
+			<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite">
+		</a-sphere>
+		<!--a-entity light="type:point; intensity:5 	; distance:5;" position="-14 0 0"></a-entity-->	
+	   <a-animation attribute="rotation" dur="20000" to="0 0 -180" repeat="indefinite"></a-animation>
+	</a-entity>
+
+
+
+<a-camera position="0 2.429 5.642">
+
+
+<!--a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"-->
+</a-camera>
+
+
+
+
+</a-scene>
+
+	  
+</body>
+</html>
+
